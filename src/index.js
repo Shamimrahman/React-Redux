@@ -2,9 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import store from './store'
+import {Provider} from 'react-redux'
+
+//connect react app with redux using provider
+store.subscribe(()=> console.log(store.getState()))
 
 ReactDOM.render(
-    <App />,
+  <Provider store={store}>
+  <App />
+  </Provider>,
+    
   document.getElementById('root')
 );
 

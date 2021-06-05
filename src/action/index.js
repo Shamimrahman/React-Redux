@@ -1,9 +1,10 @@
 //action a amra define korbo amra ki ki korbo r kivabe korbo ta 
 //define korbo reducers a
 
-export const increment=()=>{
+export const increment=(num)=>{
     return{
-        type:"INCREMENT"
+        type:"INCREMENT",
+        payload:num
     }
 }
 
